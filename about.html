@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - CCA Software & Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#0F172A',
+              'brand-secondary': '#1E293B',
+              'brand-accent': '#22D3EE',
+              'brand-accent-hover': '#67E8F9',
+              'brand-text': '#E2E8F0',
+              'brand-text-secondary': '#94A3B8',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+</head>
+<body class="bg-brand-primary text-brand-text">
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-brand-primary/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" target="_top" class="text-2xl font-bold text-brand-text">
+                            CCA<span class="text-brand-accent">.</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Home</a>
+                            <a href="about.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">About</a>
+                            <a href="services.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Services</a>
+                            <a href="OurWork.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Our Work</a>
+                            <a href="contact.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+                        </div>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-text-secondary hover:text-brand-text hover:bg-brand-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-primary focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Home</a>
+                    <a href="about.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">About</a>
+                    <a href="services.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Services</a>
+                    <a href="portfolio.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Portfolio</a>
+                    <a href="contact.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+            <div class="space-y-16 md:space-y-24">
+                <!-- Story Section -->
+                <section class="text-center">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">Engineering Excellence, Driven by Passion</h1>
+                     <div class="max-w-4xl mx-auto text-lg text-brand-text-secondary space-y-6">
+                        <p><strong class="text-brand-text">Our Story:</strong> Founded on the principle of innovation, CCA started as a small collective of passionate engineers and architects. We saw a need for a development partner that not only possessed deep technical expertise but also operated with transparency and a genuine commitment to client success. Today, we have grown into a full-service firm that helps businesses of all sizes achieve their digital ambitions.</p>
+                        <p><strong class="text-brand-text">Our Mission:</strong> To build digital products that are not only powerful and efficient but also a joy to use. We strive to solve complex problems with elegant solutions, creating lasting value for our clients and their users.</p>
+                        <p><strong class="text-brand-text">Our Vision:</strong> To be a leading force in the digital transformation landscape, recognized for our technical leadership, creative designs, and unwavering dedication to quality.</p>
+                    </div>
+                </section>
+
+                <!-- Image Banner -->
+                <section>
+                    <img src="https://picsum.photos/seed/office/1200/400" alt="Modern office" class="rounded-lg object-cover w-full h-64 shadow-lg"/>
+                </section>
+                
+                <!-- Our Core Values -->
+                 <section>
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold">Our Core Values</h2>
+                        <p class="text-brand-text-secondary mt-2">The principles that guide our work and culture.</p>
+                    </div>
+                    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+                         <div class="bg-brand-secondary p-6 rounded-lg text-center">
+                            <h3 class="font-bold text-lg text-brand-accent mb-2">Integrity</h3>
+                            <p class="text-sm text-brand-text-secondary">We believe in honest and transparent communication. We build trust by delivering on our promises and taking ownership of our work.</p>
+                        </div>
+                         <div class="bg-brand-secondary p-6 rounded-lg text-center">
+                            <h3 class="font-bold text-lg text-brand-accent mb-2">Innovation</h3>
+                            <p class="text-sm text-brand-text-secondary">We are lifelong learners who are passionate about technology. We constantly explore new tools and techniques to deliver cutting-edge solutions.</p>
+                        </div>
+                         <div class="bg-brand-secondary p-6 rounded-lg text-center">
+                            <h3 class="font-bold text-lg text-brand-accent mb-2">Collaboration</h3>
+                            <p class="text-sm text-brand-text-secondary">We work as an extension of your team. By fostering a collaborative environment, we ensure that we are all aligned and working towards the same goal.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Our Process Section -->
+                <section>
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold">Our Process</h2>
+                        <p class="text-brand-text-secondary mt-2">A structured approach for predictable, high-quality results.</p>
+                    </div>
+                    <div class="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="text-center p-6 bg-brand-secondary rounded-lg">
+                            <div class="text-brand-accent font-bold text-4xl mb-2">1</div>
+                            <h3 class="font-bold text-lg mb-2">Discovery & Strategy</h3>
+                            <p class="text-sm text-brand-text-secondary">We begin by understanding your vision, goals, and technical requirements to create a detailed project roadmap.</p>
+                        </div>
+                        <div class="text-center p-6 bg-brand-secondary rounded-lg">
+                            <div class="text-brand-accent font-bold text-4xl mb-2">2</div>
+                            <h3 class="font-bold text-lg mb-2">Design & Prototyping</h3>
+                            <p class="text-sm text-brand-text-secondary">Our UI/UX experts create wireframes and interactive prototypes to visualize the user experience before development.</p>
+                        </div>
+                        <div class="text-center p-6 bg-brand-secondary rounded-lg">
+                            <div class="text-brand-accent font-bold text-4xl mb-2">3</div>
+                            <h3 class="font-bold text-lg mb-2">Development & Testing</h3>
+                            <p class="text-sm text-brand-text-secondary">Using agile sprints, we build your application while conducting rigorous testing to ensure quality and reliability.</p>
+                        </div>
+                        <div class="text-center p-6 bg-brand-secondary rounded-lg">
+                            <div class="text-brand-accent font-bold text-4xl mb-2">4</div>
+                            <h3 class="font-bold text-lg mb-2">Deployment & Support</h3>
+                            <p class="text-sm text-brand-text-secondary">We handle the deployment to your chosen infrastructure and provide ongoing support to ensure smooth operation.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Team Section -->
+                <section>
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold">Meet Our Team</h2>
+                        <p class="text-brand-text-secondary mt-2">The architects of your digital success.</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                        <div class="text-center">
+                            <img src="https://picsum.photos/seed/jane/400/400" alt="Jane Doe" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-brand-secondary" />
+                            <h3 class="text-lg font-bold">Jane Doe</h3>
+                            <p class="text-brand-accent text-sm">CEO & Lead Architect</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://picsum.photos/seed/john/400/400" alt="John Smith" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-brand-secondary" />
+                            <h3 class="text-lg font-bold">John Smith</h3>
+                            <p class="text-brand-accent text-sm">CTO & Head of Engineering</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://picsum.photos/seed/emily/400/400" alt="Emily White" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-brand-secondary" />
+                            <h3 class="text-lg font-bold">Emily White</h3>
+                            <p class="text-brand-accent text-sm">Lead UI/UX Designer</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://picsum.photos/seed/michael/400/400" alt="Michael Brown" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-brand-secondary" />
+                            <h3 class="text-lg font-bold">Michael Brown</h3>
+                            <p class="text-brand-accent text-sm">Senior DevOps Engineer</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://picsum.photos/seed/sarah/400/400" alt="Sarah Green" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-brand-secondary" />
+                            <h3 class="text-lg font-bold">Sarah Green</h3>
+                            <p class="text-brand-accent text-sm">Lead Frontend Developer</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://picsum.photos/seed/chris/400/400" alt="Chris Lee" class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg border-4 border-brand-secondary" />
+                            <h3 class="text-lg font-bold">Chris Lee</h3>
+                            <p class="text-brand-accent text-sm">Project Manager</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer class="bg-brand-secondary">
+            <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-brand-text-secondary">
+                <p>&copy; <span id="current-year"></span> CCA. All rights reserved.</p>
+                <p class="mt-2">
+                    <a href="mailto:support@cca.work.gd" class="hover:text-brand-accent transition-colors duration-300">
+                        support@cca.work.gd
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

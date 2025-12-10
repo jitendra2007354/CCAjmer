@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - CCA Software & Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#0F172A',
+              'brand-secondary': '#1E293B',
+              'brand-accent': '#22D3EE',
+              'brand-accent-hover': '#67E8F9',
+              'brand-text': '#E2E8F0',
+              'brand-text-secondary': '#94A3B8',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+</head>
+<body class="bg-brand-primary text-brand-text">
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-brand-primary/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" target="_top" class="text-2xl font-bold text-brand-text">
+                            CCA<span class="text-brand-accent">.</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Home</a>
+                            <a href="about.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">About</a>
+                            <a href="services.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Services</a>
+                            <a href="OurWork.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">Our Work</a>
+                            <a href="contact.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+                        </div>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-text-secondary hover:text-brand-text hover:bg-brand-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-primary focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Home</a>
+                    <a href="about.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">About</a>
+                    <a href="services.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Services</a>
+                    <a href="portfolio.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">Portfolio</a>
+                    <a href="contact.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+            <div class="space-y-16">
+                <section class="text-center">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">Our Work</h1>
+                    <p class="max-w-3xl mx-auto text-lg text-brand-text-secondary">
+                        We take pride in the solutions we build. Here are some of our recent projects that showcase our capabilities and commitment to excellence.
+                    </p>
+                </section>
+                <section>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/alpha/600/400" alt="Project Alpha" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Alpha CRM</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Engineered a multi-tenant SaaS CRM with advanced analytics and automated workflows, increasing sales team productivity by 30%.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Web App</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">SaaS</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                                </div>
+                                <a href="contact.html?project=Alpha%20CRM" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/beta/600/400" alt="Project Beta" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Beta Pipeline</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Built a serverless data processing pipeline on AWS to handle millions of daily events, reducing processing time by 80%.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Cloud</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">DevOps</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">AWS Lambda</span>
+                                </div>
+                                <a href="contact.html?project=Beta%20Pipeline" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/gamma/600/400" alt="Project Gamma" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Gamma Commerce</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Developed a cross-platform mobile app for a major e-commerce brand, leading to a 50% increase in mobile conversions.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Mobile</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">React Native</span>
+                                </div>
+                                <a href="contact.html?project=Gamma%20Commerce" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/delta/600/400" alt="Project Delta" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Delta Fintech UI</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Executed a complete UI/UX overhaul for a fintech app, resulting in a 40% improvement in user engagement and retention.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">UI/UX</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Figma</span>
+                                </div>
+                                <a href="contact.html?project=Delta%20Fintech%20UI" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/epsilon/600/400" alt="Project Epsilon" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Epsilon Logistics</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Designed and implemented a microservices architecture to modernize a logistics company's legacy backend system.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Architecture</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Go</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Kubernetes</span>
+                                </div>
+                                <a href="contact.html?project=Epsilon%20Logistics" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/zeta/600/400" alt="Project Zeta" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Zeta Analytics</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Created a real-time analytics dashboard with complex D3.js visualizations to provide critical business insights.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Data</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Web App</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">D3.js</span>
+                                </div>
+                                <a href="contact.html?project=Zeta%20Analytics" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/eta/600/400" alt="Project Eta" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Eta Health Platform</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Developed a HIPAA-compliant telehealth platform connecting patients with doctors through secure video consultations.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Healthcare</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Web App</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
+                                </div>
+                                <a href="contact.html?project=Eta%20Health%20Platform" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/theta/600/400" alt="Project Theta" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Theta IoT Hub</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Built a scalable IoT platform on Azure for managing and monitoring thousands of connected devices in real-time.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">IoT</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Cloud</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Azure</span>
+                                </div>
+                                <a href="contact.html?project=Theta%20IoT%20Hub" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                         <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/iota/600/400" alt="Project Iota" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Iota EdTech Portal</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Created a comprehensive e-learning portal with video streaming, interactive quizzes, and progress tracking for students.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Education</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Vue.js</span>
+                                </div>
+                                <a href="contact.html?project=Iota%20EdTech%20Portal" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                         <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/kappa/600/400" alt="Project Kappa" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Kappa Design System</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Developed a reusable component library and design system to unify the user experience across multiple products for a large enterprise.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">UI/UX</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Design System</span>
+                                </div>
+                                <a href="contact.html?project=Kappa%20Design%20System" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/lambda/600/400" alt="Project Lambda" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Lambda Real Estate</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Launched a property listing platform with advanced search filters, map integration, and virtual tour capabilities for agents.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Web App</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Real Estate</span>
+                                </div>
+                                <a href="contact.html?project=Lambda%20Real%20Estate" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                        <div class="bg-brand-secondary rounded-lg overflow-hidden shadow-lg group flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://picsum.photos/seed/mu/600/400" alt="Project Mu" class="w-full h-48 object-cover group-hover:opacity-80 transition-opacity duration-300" />
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Mu Booking Engine</h3>
+                                <p class="text-brand-text-secondary mb-4 text-sm flex-grow">Engineered a high-availability booking engine for a travel company, handling thousands of concurrent users and transactions.</p>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Architecture</span>
+                                    <span class="bg-slate-700 text-brand-text-secondary text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                </div>
+                                <a href="contact.html?project=Mu%20Booking%20Engine" target="_top" class="inline-block text-center bg-brand-accent text-brand-primary text-sm font-bold py-2 px-5 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer class="bg-brand-secondary">
+            <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-brand-text-secondary">
+                <p>&copy; <span id="current-year"></span> CCA. All rights reserved.</p>
+                <p class="mt-2">
+                    <a href="mailto:support@cca.work.gd" class="hover:text-brand-accent transition-colors duration-300">
+                        support@cca.work.gd
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

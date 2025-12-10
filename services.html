@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - CCA Software & Architecture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#0F172A',
+              'brand-secondary': '#1E293B',
+              'brand-accent': '#22D3EE',
+              'brand-accent-hover': '#67E8F9',
+              'brand-text': '#E2E8F0',
+              'brand-text-secondary': '#94A3B8',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+</head>
+<body class="bg-brand-primary text-brand-text">
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-brand-primary/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" target="_top" class="text-2xl font-bold text-brand-text">
+                            CCA<span class="text-brand-accent">.</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Home</a>
+                            <a href="about.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">About</a>
+                            <a href="services.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">Services</a>
+                            <a href="OurWork.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Our Work</a>
+                            <a href="contact.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+                        </div>
+                    </div>
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-text-secondary hover:text-brand-text hover:bg-brand-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-primary focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Home</a>
+                    <a href="about.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">About</a>
+                    <a href="services.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">Services</a>
+                    <a href="portfolio.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Portfolio</a>
+                    <a href="contact.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+            <div class="space-y-16 md:space-y-24">
+                <section class="text-center">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-4">Our Expertise</h1>
+                    <p class="max-w-3xl mx-auto text-lg text-brand-text-secondary">
+                        We provide end-to-end solutions to transform your ideas into reality. Our expertise spans the entire product lifecycle, from initial concept to deployment, maintenance, and beyond. We are your dedicated technical partner for growth.
+                    </p>
+                </section>
+
+                <section class="space-y-16">
+                    <!-- Service 1 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                        <div class="md:w-2/5 flex justify-center">
+                            <div class="bg-brand-secondary p-8 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-24 h-24 text-brand-accent">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="md:w-3/5 text-center md:text-left">
+                            <h2 class="text-2xl font-bold mb-3">Custom Software Development</h2>
+                            <p class="text-brand-text-secondary mb-4">We build tailored software solutions from scratch, including web applications, mobile apps, and enterprise systems. Our process focuses on clean code, robust architecture, and agile methodologies to deliver products that meet your specific business needs.</p>
+                            <h4 class="font-semibold text-brand-text mb-2">What's Included:</h4>
+                            <ul class="list-disc list-inside text-brand-text-secondary space-y-1 text-sm">
+                                <li>Full-stack Web Application Development (Front-end & Back-end)</li>
+                                <li>Native & Cross-Platform Mobile App Development (iOS & Android)</li>
+                                <li>API Design and Development (REST & GraphQL)</li>
+                                <li>Database Design, Management, and Optimization</li>
+                                <li>Third-party Service Integrations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
+                         <div class="md:w-2/5 flex justify-center">
+                            <div class="bg-brand-secondary p-8 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-24 h-24 text-brand-accent">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.09A5.002 5.002 0 003 15z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="md:w-3/5 text-center md:text-left">
+                            <h2 class="text-2xl font-bold mb-3">Cloud & DevOps Architecture</h2>
+                            <p class="text-brand-text-secondary mb-4">Leverage the power of the cloud with our expert architecture services. We design, implement, and manage secure, scalable, and cost-efficient cloud infrastructure. Our DevOps practices ensure seamless CI/CD pipelines and automated operations.</p>
+                            <h4 class="font-semibold text-brand-text mb-2">What's Included:</h4>
+                            <ul class="list-disc list-inside text-brand-text-secondary space-y-1 text-sm">
+                                <li>Cloud Infrastructure Design (AWS, GCP, Azure)</li>
+                                <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+                                <li>CI/CD Pipeline Implementation for Automated Deployments</li>
+                                <li>Containerization and Orchestration (Docker, Kubernetes)</li>
+                                <li>Monitoring, Logging, and Alerting Solutions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                         <div class="md:w-2/5 flex justify-center">
+                            <div class="bg-brand-secondary p-8 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-24 h-24 text-brand-accent">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="md:w-3/5 text-center md:text-left">
+                            <h2 class="text-2xl font-bold mb-3">UI/UX & Product Design</h2>
+                            <p class="text-brand-text-secondary mb-4">User experience is at the heart of every successful product. Our design team works to create intuitive, engaging, and visually stunning interfaces. From wireframing and prototyping to a complete design system, we cover all aspects of product design.</p>
+                             <h4 class="font-semibold text-brand-text mb-2">What's Included:</h4>
+                            <ul class="list-disc list-inside text-brand-text-secondary space-y-1 text-sm">
+                                <li>User Research and Persona Development</li>
+                                <li>Wireframing and Interactive Prototyping</li>
+                                <li>High-Fidelity UI Design and Design Systems</li>
+                                <li>Usability Testing and Feedback Analysis</li>
+                                <li>Accessibility (A11Y) Audits and Implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Industries Section -->
+                <section>
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold">Industries We Serve</h2>
+                        <p class="text-brand-text-secondary mt-2">We apply our technical expertise to a wide range of industries.</p>
+                    </div>
+                    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="font-bold text-brand-text">FinTech</h3>
+                        </div>
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="font-bold text-brand-text">Healthcare</h3>
+                        </div>
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="font-bold text-brand-text">E-commerce</h3>
+                        </div>
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="font-bold text-brand-text">Logistics</h3>
+                        </div>
+                         <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="font-bold text-brand-text">SaaS</h3>
+                        </div>
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="font-bold text-brand-text">Education</h3>
+                        </div>
+                         <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="font-bold text-brand-text">Real Estate</h3>
+                        </div>
+                         <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="font-bold text-brand-text">IoT</h3>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Technology Stack Section -->
+                <section>
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold">Our Technology Stack</h2>
+                        <p class="text-brand-text-secondary mt-2">We use modern, proven technologies to build reliable and performant applications.</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div>
+                            <h3 class="font-bold text-brand-accent mb-3 text-center md:text-left">Frontend</h3>
+                            <ul class="space-y-2 text-brand-text-secondary text-center md:text-left">
+                                <li>React & Next.js</li>
+                                <li>Vue & Nuxt.js</li>
+                                <li>TypeScript</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                         <div>
+                            <h3 class="font-bold text-brand-accent mb-3 text-center md:text-left">Backend</h3>
+                            <ul class="space-y-2 text-brand-text-secondary text-center md:text-left">
+                                <li>Node.js & Express</li>
+                                <li>Python (Django, Flask)</li>
+                                <li>Go</li>
+                                <li>PostgreSQL & MongoDB</li>
+                            </ul>
+                        </div>
+                         <div>
+                            <h3 class="font-bold text-brand-accent mb-3 text-center md:text-left">Cloud & DevOps</h3>
+                            <ul class="space-y-2 text-brand-text-secondary text-center md:text-left">
+                                <li>AWS, GCP, Azure</li>
+                                <li>Docker & Kubernetes</li>
+                                <li>Terraform</li>
+                                <li>GitHub Actions, Jenkins</li>
+                            </ul>
+                        </div>
+                         <div>
+                            <h3 class="font-bold text-brand-accent mb-3 text-center md:text-left">Mobile & Design</h3>
+                            <ul class="space-y-2 text-brand-text-secondary text-center md:text-left">
+                                <li>React Native</li>
+                                <li>Swift (iOS) & Kotlin (Android)</li>
+                                <li>Figma & Sketch</li>
+                                <li>Adobe Creative Suite</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer class="bg-brand-secondary">
+            <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-brand-text-secondary">
+                <p>&copy; <span id="current-year"></span> CCA. All rights reserved.</p>
+                <p class="mt-2">
+                    <a href="mailto:support@cca.work.gd" class="hover:text-brand-accent transition-colors duration-300">
+                        support@cca.work.gd
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
