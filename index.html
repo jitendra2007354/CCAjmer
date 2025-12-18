@@ -46,25 +46,31 @@
 
 <script>
     const AD_URL = "https://pl28280794.effectivegatecpm.com/84/65/b2/8465b2c75a897a72344ab1c5bbc763d0.js";
+    const gate = document.getElementById("entryGate");
 
-    function triggerAd() {
-        const s = document.createElement("script");
-        s.type = "text/javascript";
-        s.src = AD_URL;
-        document.body.appendChild(s);
+    // Immediately remove gate if they already "paid" with a click this session
+    if (sessionStorage.getItem("gatePassed") === "true") {
+        if (gate) gate.remove();
     }
 
-    const gate = document.getElementById("entryGate");
-    
-    // When the user clicks the "Click to Enter" screen
-    gate.addEventListener("click", function() {
-        triggerAd();      // This launches the fullscreen ad/pop-under
-        this.fadeOut();   // Custom function or just remove it
-        this.remove();    // Removes the dark screen so your site appears
-    });
+    if (gate) {
+        gate.addEventListener("click", function () {
+            // 1. Mark as passed
+            sessionStorage.setItem("gatePassed", "true");
 
-    // Handle Year
-    document.getElementById("current-year").textContent = new Date().getFullYear();
+            // 2. Inject the Ad Script
+            const s = document.createElement("script");
+            s.type = "text/javascript";
+            s.src = AD_URL;
+            
+            // This tells the browser to prioritize this script
+            s.async = false; 
+            document.head.appendChild(s);
+
+            // 3. Remove the gate to show the site (the ad will pop over it)
+            this.remove();
+        });
+    }
 </script>
 
     <div class="flex flex-col min-h-screen">
