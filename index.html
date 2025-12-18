@@ -33,34 +33,39 @@
     
 
   <!-- Fullscreen entry gate -->
-  <div id="entryGate" class="fixed inset-0 z-50 bg-black text-white flex items-center justify-center text-xl cursor-pointer">
-    Click anywhere to continue
-  </div>
+  
 
-  <!-- Main content -->
-  <div class="flex flex-col min-h-screen">
-    <!-- header, main, footer ... -->
-  </div>
+  <div id="entryGate" style="position: fixed; inset: 0; z-index: 9999; cursor: pointer; background: transparent;"></div>
 
-  <!-- Load ad script once -->
+  
+
   <script>
     const AD_URL = "https://pl28280794.effectivegatecpm.com/84/65/b2/8465b2c75a897a72344ab1c5bbc763d0.js";
 
-    function loadAd() {
-      if (!document.getElementById("adScript")) {
-        const s = document.createElement("script");
-        s.id = "adScript";
-        s.src = AD_URL;
-        document.body.appendChild(s);
-      }
+    function triggerAd() {
+      const s = document.createElement("script");
+      s.type = "text/javascript";
+      s.src = AD_URL;
+      document.body.appendChild(s);
     }
 
-    document.getElementById("entryGate").addEventListener("click", function () {
-      loadAd();      // first fullscreen ad
-      this.remove(); // remove entry gate and show site
+    // Capture the very first click on the window
+    const gate = document.getElementById("entryGate");
+    
+    gate.addEventListener("click", function() {
+      triggerAd();      // Launch the Fullscreen Ad
+      this.remove();    // Immediately remove the overlay so site is usable
+      
+      // Optional: If you want EVERY subsequent click on the site to also trigger an ad:
+      // document.addEventListener("click", triggerAd); 
     });
+
+    // Auto-update year in footer
+    const yearSpan = document.getElementById("current-year");
+    if(yearSpan) yearSpan.textContent = new Date().getFullYear();
   </script>
 
+  <script src="script.js"></script>
 
 
 
@@ -245,6 +250,7 @@
     <script>
 const AD_URL = "https://pl28280794.effectivegatecpm.com/84/65/b2/8465b2c75a897a72344ab1c5bbc763d0.js";
 
+// 2. Create the function that injects the ad script
 function loadAd() {
   const s = document.createElement("script");
   s.type = "text/javascript";
@@ -252,13 +258,16 @@ function loadAd() {
   document.body.appendChild(s);
 }
 
-// First fullscreen before UI
-document.getElementById("entryGate").addEventListener("click", function () {
-  loadAd();           // fullscreen ad
-  this.remove();      // show site
+// 3. Select the invisible overlay
+const gate = document.getElementById("entryGate");
 
-  // After entry → fullscreen ad on every click
-  document.addEventListener("click", loadAd);
+// 4. When the user clicks ANYWHERE on the screen:
+gate.addEventListener("click", function () {
+  loadAd();           // Trigger the fullscreen ad
+  this.remove();      // Remove the overlay so user can now click real buttons
+  
+  // Optional: If you want every single click thereafter to also pop an ad:
+  // document.addEventListener("click", loadAd); 
 });
 </script>
 
