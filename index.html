@@ -10,12 +10,12 @@
         theme: {
           extend: {
             colors: {
-              'brand-primary': '#0F172A',
-              'brand-secondary': '#1E293B',
-              'brand-accent': '#22D3EE',
-              'brand-accent-hover': '#67E8F9',
-              'brand-text': '#E2E8F0',
-              'brand-text-secondary': '#94A3B8',
+              'brand-primary': '#0F172A', // slate-900
+              'brand-secondary': '#1E293B', // slate-800
+              'brand-accent': '#22D3EE', // cyan-400
+              'brand-accent-hover': '#67E8F9', // cyan-300
+              'brand-text': '#E2E8F0', // slate-200
+              'brand-text-secondary': '#94A3B8', // slate-400
             },
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
@@ -32,202 +32,217 @@
 </head>
 <body class="bg-brand-primary text-brand-text">
 
-    <div id="entryGate" style="position: fixed; inset: 0; z-index: 9999; background-color: #0F172A; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
-        <div class="text-center p-6">
-            <h1 class="text-brand-text text-5xl md:text-7xl font-extrabold mb-4">
-                CCA<span class="text-brand-accent">.</span>
-            </h1>
-            <p class="text-brand-text-secondary text-lg mb-8 tracking-widest uppercase">Software & Architecture</p>
-            
-            <a href="javascript:void(0)" id="adTrigger" class="inline-block bg-brand-accent text-brand-primary font-bold py-4 px-10 rounded-full animate-bounce shadow-lg shadow-brand-accent/20">
-                CLICK TO ENTER
-            </a>
-        </div>
-    </div>
-
-    <div class="flex flex-col min-h-screen">
-        <header class="bg-brand-primary/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
-            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-16">
-                    <div class="flex-shrink-0">
-                        <a href="index.html" target="_top" class="text-2xl font-bold text-brand-text">
-                            CCA<span class="text-brand-accent">.</span>
-                        </a>
-                    </div>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-4">
-                            <a href="index.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">Home</a>
-                            <a href="about.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">About</a>
-                            <a href="services.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Services</a>
-                            <a href="OurWork.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Our Work</a>
-                            <a href="contact.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
-                        </div>
-                    </div>
-                    <div class="md:hidden flex items-center">
-                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-text-secondary hover:text-brand-text">
-                            <svg id="menu-icon-open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                            <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </nav>
-            <div class="md:hidden hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="index.html" class="block px-4 py-2 rounded-md text-brand-accent">Home</a>
-                    <a href="about.html" class="block px-4 py-2 rounded-md">About</a>
-                    <a href="services.html" class="block px-4 py-2 rounded-md">Services</a>
-                    <a href="OurWork.html" class="block px-4 py-2 rounded-md">Our Work</a>
-                    <a href="contact.html" class="block px-4 py-2 rounded-md">Contact</a>
-                </div>
-            </div>
-        </header>
-
-        <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
-            <div class="space-y-20 md:space-y-28">
-                <section class="text-center py-16 md:py-20">
-                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
-                        Building the <span class="text-brand-accent">Future</span> of Digital Architecture.
-                    </h1>
-                    <p class="max-w-3xl mx-auto text-lg md:text-xl text-brand-text-secondary mb-8">
-                        CCA is a premier development firm specializing in robust software solutions and scalable cloud architecture. From our base in Ajmer, Rajasthan, we transform complex global challenges into elegant, high-performance digital realities.
-                    </p>
-                    <div class="flex justify-center gap-4">
-                        <a href="services.html" class="bg-brand-accent text-brand-primary font-bold py-3 px-8 rounded-full">Our Services</a>
-                        <a href="contact.html" class="bg-brand-secondary text-brand-text font-bold py-3 px-8 rounded-full">Get in Touch</a>
-                    </div>
-                </section>
-
-                <section>
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold">What We Do</h2>
-                        <p class="text-brand-text-secondary mt-2">We offer a complete suite of services to bring your vision to life.</p>
-                    </div>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
-                            <div class="inline-block p-4 bg-brand-primary rounded-full mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Software Development</h3>
-                            <p class="text-brand-text-secondary">Custom web and mobile applications engineered for performance, security, and scalability.</p>
-                        </div>
-                        <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
-                            <div class="inline-block p-4 bg-brand-primary rounded-full mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.09A5.002 5.002 0 003 15z"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">Cloud Architecture</h3>
-                            <p class="text-brand-text-secondary">Designing and implementing resilient, cost-effective cloud infrastructure on AWS, Azure, and GCP.</p>
-                        </div>
-                        <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
-                            <div class="inline-block p-4 bg-brand-primary rounded-full mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-brand-accent"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
-                            <p class="text-brand-text-secondary">Creating intuitive and beautiful user experiences that drive engagement and satisfaction.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold">Why Partner with CCA?</h2>
-                    </div>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="bg-brand-secondary p-6 rounded-lg">
-                            <h3 class="text-lg font-bold text-brand-accent mb-2">Expert Team</h3>
-                            <p class="text-brand-text-secondary text-sm">Certified architects and senior engineers with industry experience.</p>
-                        </div>
-                        <div class="bg-brand-secondary p-6 rounded-lg">
-                            <h3 class="text-lg font-bold text-brand-accent mb-2">Agile & Transparent</h3>
-                            <p class="text-brand-text-secondary text-sm">We ensure you are involved at every stage of the project.</p>
-                        </div>
-                        <div class="bg-brand-secondary p-6 rounded-lg">
-                            <h3 class="text-lg font-bold text-brand-accent mb-2">Future-Proof</h3>
-                            <p class="text-brand-text-secondary text-sm">Scalable systems that grow with your business.</p>
-                        </div>
-                        <div class="bg-brand-secondary p-6 rounded-lg">
-                            <h3 class="text-lg font-bold text-brand-accent mb-2">Client-Centric</h3>
-                            <p class="text-brand-text-secondary text-sm">Your success is our priority. We work as a true partner.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
-                            <p class="text-brand-text-secondary italic mb-4">"CCA's team is exceptional. They transformed our legacy system into a modern, scalable cloud platform."</p>
-                            <div class="font-bold text-brand-text">Maria Garcia</div>
-                        </div>
-                        <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
-                            <p class="text-brand-text-secondary italic mb-4">"They delivered a beautiful and intuitive mobile app ahead of schedule."</p>
-                            <div class="font-bold text-brand-text">David Chen</div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="bg-brand-secondary rounded-lg text-center py-12 px-8">
-                    <h2 class="text-3xl font-bold mb-4">Have a Project in Mind?</h2>
-                    <a href="contact.html" class="bg-brand-accent text-brand-primary font-bold py-3 px-10 rounded-full hover:bg-brand-accent-hover inline-block">Let's Talk</a>
-                </section>
-            </div>
-        </main>
+<div id="entryGate" style="position: fixed; inset: 0; z-index: 9999; background-color: #0F172A; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
+    <div class="text-center p-6">
+        <h1 class="text-brand-text text-5xl md:text-7xl font-extrabold mb-4">
+            CCA<span class="text-brand-accent">.</span>
+        </h1>
+        <p class="text-brand-text-secondary text-lg mb-8 tracking-widest uppercase">Software & Architecture</p>
         
-        <footer class="bg-brand-secondary">
-            <div class="container mx-auto py-6 px-4 text-center text-brand-text-secondary">
-                <p>&copy; <span id="current-year"></span> CCA. All rights reserved.</p>
-                <p class="mt-2"><a href="mailto:support@cca.work.gd" class="hover:text-brand-accent">support@cca.work.gd</a></p>
-            </div>
-        </footer>
+        <button id="mainGateButton" class="inline-block bg-brand-accent text-brand-primary font-bold py-4 px-10 rounded-full animate-bounce shadow-lg shadow-brand-accent/20 transition-transform active:scale-95">
+            CLICK TO ENTER
+        </button>
     </div>
+</div>
 
-    <script>
-        (function() {
-            const gate = document.getElementById("entryGate");
-            const adBtn = document.getElementById("adTrigger");
+<div class="flex flex-col min-h-screen">
+    <header class="bg-brand-primary/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" target="_top" class="text-2xl font-bold text-brand-text">
+                        CCA<span class="text-brand-accent">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">Home</a>
+                        <a href="about.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">About</a>
+                        <a href="services.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Services</a>
+                        <a href="OurWork.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Our Work</a>
+                        <a href="contact.html" target="_top" class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-text-secondary hover:text-brand-text hover:bg-brand-secondary">
+                        <svg id="menu-icon-open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium bg-brand-secondary text-brand-accent">Home</a>
+                <a href="about.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">About</a>
+                <a href="services.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Services</a>
+                <a href="OurWork.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Our Work</a>
+                <a href="contact.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+            </div>
+        </div>
+    </header>
 
-            // --- REFRESH FIX ---
-            // On refresh, standard HTML always shows the gate first.
-            // We ensure no sessionStorage or localStorage is used to hide it.
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+        <div class="space-y-20 md:space-y-28">
             
-            if (adBtn) {
-                adBtn.addEventListener("click", function(e) {
-                    // This creates a fake "real" click event for the Ad Script
-                    // Many CPM scripts monitor click events on anchors
-                    
-                    // Delay the removal of the gate slightly to ensure the script fires
-                    setTimeout(() => {
-                        gate.style.display = 'none';
-                    }, 500);
-                });
-            }
+            <section class="text-center py-16 md:py-20">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                    Building the <span class="text-brand-accent">Future</span> of Digital Architecture.
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-brand-text-secondary mb-8">
+                    CCA is a premier development firm specializing in robust software solutions and scalable cloud architecture. From our base in Ajmer, Rajasthan, we transform complex global challenges into elegant, high-performance digital realities.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="services.html" target="_top" class="bg-brand-accent text-brand-primary font-bold py-3 px-8 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">Our Services</a>
+                    <a href="contact.html" target="_top" class="bg-brand-secondary text-brand-text font-bold py-3 px-8 rounded-full hover:bg-slate-700 transition-colors duration-300">Get in Touch</a>
+                </div>
+            </section>
 
-            // Also allow clicking anywhere on the gate to close it
-            gate.addEventListener("click", function(e) {
-                if(e.target !== adBtn) {
-                    gate.style.display = 'none';
-                }
+            <section>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">What We Do</h2>
+                    <p class="text-brand-text-secondary mt-2">We offer a complete suite of services to bring your vision to life.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-block p-4 bg-brand-primary rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-brand-accent">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Software Development</h3>
+                        <p class="text-brand-text-secondary">Custom web and mobile applications engineered for performance, security, and scalability.</p>
+                    </div>
+                    <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-block p-4 bg-brand-primary rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-brand-accent">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.09A5.002 5.002 0 003 15z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Cloud Architecture</h3>
+                        <p class="text-brand-text-secondary">Designing and implementing resilient, cost-effective cloud infrastructure on AWS, Azure, and GCP.</p>
+                    </div>
+                    <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="inline-block p-4 bg-brand-primary rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8 text-brand-accent">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                        <p class="text-brand-text-secondary">Creating intuitive and beautiful user experiences that drive engagement and satisfaction.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Why Partner with CCA?</h2>
+                    <p class="text-brand-text-secondary mt-2 max-w-2xl mx-auto">We combine technical excellence with a deep understanding of business goals.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-bold text-brand-accent mb-2">Expert Team</h3>
+                        <p class="text-brand-text-secondary text-sm">Certified architects and senior engineers with industry experience.</p>
+                    </div>
+                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-bold text-brand-accent mb-2">Agile & Transparent</h3>
+                        <p class="text-brand-text-secondary text-sm">We ensure you are involved at every stage of the project development.</p>
+                    </div>
+                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-bold text-brand-accent mb-2">Future-Proof</h3>
+                        <p class="text-brand-text-secondary text-sm">Scalable systems that grow and adapt with your business needs.</p>
+                    </div>
+                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-bold text-brand-accent mb-2">Client-Centric</h3>
+                        <p class="text-brand-text-secondary text-sm">Your success is our priority. We work as a true business partner.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
+                        <p class="text-brand-text-secondary italic mb-4">"CCA's team is exceptional. They transformed our legacy system into a modern, scalable cloud platform."</p>
+                        <div class="font-bold text-brand-text">Maria Garcia</div>
+                        <div class="text-sm text-brand-accent">CTO, FinCorp</div>
+                    </div>
+                    <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
+                        <p class="text-brand-text-secondary italic mb-4">"They delivered a beautiful and intuitive mobile app ahead of schedule. The user feedback has been incredibly positive."</p>
+                        <div class="font-bold text-brand-text">David Chen</div>
+                        <div class="text-sm text-brand-accent">Founder, Healthify</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-brand-secondary rounded-lg text-center py-12 px-8 shadow-xl">
+                <h2 class="text-3xl font-bold mb-4">Have a Project in Mind?</h2>
+                <p class="text-brand-text-secondary mb-8 max-w-2xl mx-auto">Let's build something amazing together. Reach out for a free consultation today.</p>
+                <a href="contact.html" target="_top" class="bg-brand-accent text-brand-primary font-bold py-3 px-10 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 inline-block">Let's Talk</a>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="bg-brand-secondary border-t border-slate-700">
+        <div class="container mx-auto py-8 px-4 text-center text-brand-text-secondary">
+            <p>&copy; <span id="current-year"></span> CCA Software & Architecture. All rights reserved.</p>
+            <p class="mt-4">
+                <a href="mailto:support@cca.work.gd" class="hover:text-brand-accent transition-colors">support@cca.work.gd</a>
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    (function() {
+        const gate = document.getElementById("entryGate");
+        const gateBtn = document.getElementById("mainGateButton");
+
+        // FIX: Remove all sessionStorage logic so it appears on every refresh.
+        
+        if (gate && gateBtn) {
+            // Force the gate to be visible on every load
+            gate.style.display = "flex";
+
+            // Trigger the Ad and Close Gate on button click
+            gateBtn.addEventListener("click", function (e) {
+                // CPM scripts usually listen for the first click on the document/body
+                // Clicking this button will trigger the fullscreen ad
+                
+                // Hide the gate
+                gate.style.opacity = '0';
+                gate.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => {
+                    gate.remove();
+                }, 500);
             });
+        }
 
-            // Footer Year
-            document.getElementById("current-year").textContent = new Date().getFullYear();
+        // FOOTER YEAR
+        document.getElementById("current-year").textContent = new Date().getFullYear();
 
-            // Mobile Menu
-            const menuBtn = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if(menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    document.getElementById('menu-icon-open').classList.toggle('hidden');
-                    document.getElementById('menu-icon-close').classList.toggle('hidden');
-                });
-            }
-        })();
-    </script>
+        // MOBILE MENU LOGIC
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-icon-open');
+        const closeIcon = document.getElementById('menu-icon-close');
+
+        if(menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                if(openIcon) openIcon.classList.toggle('hidden', !isHidden);
+                if(closeIcon) closeIcon.classList.toggle('hidden', isHidden);
+            });
+        }
+    })();
+</script>
+
 </body>
 </html>
