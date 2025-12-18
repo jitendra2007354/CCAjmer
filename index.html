@@ -33,17 +33,17 @@
 <body class="bg-brand-primary text-brand-text">
 
 <div id="entryGate" style="position: fixed; inset: 0; z-index: 9999; background-color: #0F172A; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
+    
+    <div id="adTriggerLayer" style="position: absolute; inset: 0; z-index: 10000; background: transparent;"></div>
+
     <div class="text-center p-6 relative">
         <h1 class="text-brand-text text-5xl md:text-7xl font-extrabold mb-4">
             CCA<span class="text-brand-accent">.</span>
         </h1>
         <p class="text-brand-text-secondary text-lg mb-8 tracking-widest uppercase">Software & Architecture</p>
         
-        <div class="relative inline-block">
-            <div id="visualBtn" class="inline-block bg-brand-accent text-brand-primary font-bold py-4 px-10 rounded-full animate-bounce shadow-lg shadow-brand-accent/20">
-                CLICK TO ENTER
-            </div>
-            <a href="javascript:void(0)" id="finalTrigger" style="position: absolute; inset: 0; z-index: 100; cursor: pointer; display: block;"></a>
+        <div class="inline-block bg-brand-accent text-brand-primary font-bold py-4 px-10 rounded-full animate-bounce shadow-lg shadow-brand-accent/20">
+            CLICK ANYWHERE TO ENTER
         </div>
     </div>
 </div>
@@ -78,7 +78,7 @@
                     CCA is a premier development firm specializing in robust software solutions and scalable cloud architecture.
                 </p>
                 <div class="flex justify-center gap-4">
-                    <a href="services.html" class="bg-brand-accent text-brand-primary font-bold py-3 px-8 rounded-full">Our Services</a>
+                    <a href="services.html" class="bg-brand-accent text-brand-primary font-bold py-3 px-8 rounded-full hover:scale-105 transition-transform">Our Services</a>
                     <a href="contact.html" class="bg-brand-secondary text-brand-text font-bold py-3 px-8 rounded-full">Get in Touch</a>
                 </div>
             </section>
@@ -86,17 +86,17 @@
             <section>
                 <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold">What We Do</h2></div>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform">
+                    <div class="bg-brand-secondary p-8 rounded-lg text-center">
                         <h3 class="text-xl font-bold mb-2">Software Development</h3>
                         <p class="text-brand-text-secondary text-sm">Custom web and mobile applications engineered for performance.</p>
                     </div>
-                    <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform">
+                    <div class="bg-brand-secondary p-8 rounded-lg text-center">
                         <h3 class="text-xl font-bold mb-2">Cloud Architecture</h3>
                         <p class="text-brand-text-secondary text-sm">Resilient infrastructure on AWS and Azure.</p>
                     </div>
-                    <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform">
+                    <div class="bg-brand-secondary p-8 rounded-lg text-center">
                         <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
-                        <p class="text-brand-text-secondary text-sm">Intuitive beautiful user experiences.</p>
+                        <p class="text-brand-text-secondary text-sm">Beautiful user experiences that drive engagement.</p>
                     </div>
                 </div>
             </section>
@@ -104,10 +104,22 @@
             <section>
                 <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold">Why Partner with CCA?</h2></div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm"><h3 class="text-brand-accent font-bold mb-2">Expert Team</h3><p class="text-sm">Certified architects.</p></div>
-                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm"><h3 class="text-brand-accent font-bold mb-2">Agile</h3><p class="text-sm">Transparent process.</p></div>
-                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm"><h3 class="text-brand-accent font-bold mb-2">Future-Proof</h3><p class="text-sm">Scalable systems.</p></div>
-                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm"><h3 class="text-brand-accent font-bold mb-2">Client-Centric</h3><p class="text-sm">Your success first.</p></div>
+                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm text-center">
+                        <h3 class="text-brand-accent font-bold mb-2">Expert Team</h3>
+                        <p class="text-xs">Certified architects and engineers.</p>
+                    </div>
+                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm text-center">
+                        <h3 class="text-brand-accent font-bold mb-2">Agile</h3>
+                        <p class="text-xs">Transparent and involved process.</p>
+                    </div>
+                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm text-center">
+                        <h3 class="text-brand-accent font-bold mb-2">Future-Proof</h3>
+                        <p class="text-xs">Scalable systems for growth.</p>
+                    </div>
+                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm text-center">
+                        <h3 class="text-brand-accent font-bold mb-2">Client-Centric</h3>
+                        <p class="text-xs">Your success is our priority.</p>
+                    </div>
                 </div>
             </section>
 
@@ -115,16 +127,16 @@
                 <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2></div>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
-                        <p class="italic text-brand-text-secondary text-sm mb-4">"CCA's team is exceptional. They transformed our legacy system."</p>
+                        <p class="italic text-brand-text-secondary text-sm mb-4">"CCA modernized our entire system efficiently."</p>
                         <div class="font-bold">Maria Garcia - CTO</div>
                     </div>
                     <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
-                        <p class="italic text-brand-text-secondary text-sm mb-4">"They delivered a beautiful and intuitive mobile app."</p>
+                        <p class="italic text-brand-text-secondary text-sm mb-4">"Intuitive mobile app delivered ahead of schedule."</p>
                         <div class="font-bold">David Chen - Founder</div>
                     </div>
                 </div>
             </section>
-            
+
             <section class="bg-brand-secondary rounded-lg text-center py-12 px-8">
                 <h2 class="text-3xl font-bold mb-4">Have a Project in Mind?</h2>
                 <a href="contact.html" class="bg-brand-accent text-brand-primary font-bold py-3 px-10 rounded-full inline-block">Let's Talk</a>
@@ -140,16 +152,16 @@
 <script>
     (function() {
         const gate = document.getElementById("entryGate");
-        const trigger = document.getElementById("finalTrigger");
+        const trigger = document.getElementById("adTriggerLayer");
 
-        // NO SESSION STORAGE: Shows every time you refresh.
+        // FIX: The gate will show on every refresh because no sessionStorage is used.
         
         if (trigger) {
-            trigger.addEventListener("click", function(e) {
-                // FORCE THE AD: Many CPMs need a 'pop' from a direct click
-                // Most modern scripts use 'popunders' that trigger on any page click
+            trigger.addEventListener("click", function() {
+                // The ad script listens for clicks on the window/document.
+                // Clicking this transparent layer triggers the pop-under ad.
                 
-                // Hide and Remove Gate
+                // Hide and remove the gate after the click
                 gate.style.opacity = "0";
                 gate.style.transition = "opacity 0.5s ease";
                 setTimeout(() => { gate.remove(); }, 500);
