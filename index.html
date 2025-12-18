@@ -39,9 +39,9 @@
             </h1>
             <p class="text-brand-text-secondary text-lg mb-8 tracking-widest uppercase">Software & Architecture</p>
             
-            <div class="inline-block bg-brand-accent text-brand-primary font-bold py-4 px-10 rounded-full animate-bounce shadow-lg shadow-brand-accent/20">
+            <a href="javascript:void(0)" id="adTrigger" class="inline-block bg-brand-accent text-brand-primary font-bold py-4 px-10 rounded-full animate-bounce shadow-lg shadow-brand-accent/20">
                 CLICK TO ENTER
-            </div>
+            </a>
         </div>
     </div>
 
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="md:hidden flex items-center">
-                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-text-secondary hover:text-brand-text hover:bg-brand-secondary">
+                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-text-secondary hover:text-brand-text">
                             <svg id="menu-icon-open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
@@ -77,11 +77,11 @@
             </nav>
             <div class="md:hidden hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="index.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 bg-brand-secondary text-brand-accent">Home</a>
-                    <a href="about.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">About</a>
-                    <a href="services.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Services</a>
-                    <a href="portfolio.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Portfolio</a>
-                    <a href="contact.html" target="_top" class="block px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 text-brand-text-secondary hover:bg-brand-secondary hover:text-brand-text">Contact</a>
+                    <a href="index.html" class="block px-4 py-2 rounded-md text-brand-accent">Home</a>
+                    <a href="about.html" class="block px-4 py-2 rounded-md">About</a>
+                    <a href="services.html" class="block px-4 py-2 rounded-md">Services</a>
+                    <a href="OurWork.html" class="block px-4 py-2 rounded-md">Our Work</a>
+                    <a href="contact.html" class="block px-4 py-2 rounded-md">Contact</a>
                 </div>
             </div>
         </header>
@@ -96,14 +96,15 @@
                         CCA is a premier development firm specializing in robust software solutions and scalable cloud architecture. From our base in Ajmer, Rajasthan, we transform complex global challenges into elegant, high-performance digital realities.
                     </p>
                     <div class="flex justify-center gap-4">
-                        <a href="services.html" target="_top" class="bg-brand-accent text-brand-primary font-bold py-3 px-8 rounded-full hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300">Our Services</a>
-                        <a href="contact.html" target="_top" class="bg-brand-secondary text-brand-text font-bold py-3 px-8 rounded-full hover:bg-slate-700 transition-colors duration-300">Get in Touch</a>
+                        <a href="services.html" class="bg-brand-accent text-brand-primary font-bold py-3 px-8 rounded-full">Our Services</a>
+                        <a href="contact.html" class="bg-brand-secondary text-brand-text font-bold py-3 px-8 rounded-full">Get in Touch</a>
                     </div>
                 </section>
 
                 <section>
                     <div class="text-center mb-12">
                         <h2 class="text-3xl md:text-4xl font-bold">What We Do</h2>
+                        <p class="text-brand-text-secondary mt-2">We offer a complete suite of services to bring your vision to life.</p>
                     </div>
                     <div class="grid md:grid-cols-3 gap-8">
                         <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
@@ -135,22 +136,36 @@
                         <h2 class="text-3xl md:text-4xl font-bold">Why Partner with CCA?</h2>
                     </div>
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="bg-brand-secondary p-6 rounded-lg"><h3 class="text-lg font-bold text-brand-accent mb-2">Expert Team</h3><p class="text-brand-text-secondary text-sm">Certified architects and senior engineers.</p></div>
-                        <div class="bg-brand-secondary p-6 rounded-lg"><h3 class="text-lg font-bold text-brand-accent mb-2">Agile</h3><p class="text-brand-text-secondary text-sm">Involved at every stage.</p></div>
-                        <div class="bg-brand-secondary p-6 rounded-lg"><h3 class="text-lg font-bold text-brand-accent mb-2">Future-Proof</h3><p class="text-brand-text-secondary text-sm">Scalable systems.</p></div>
-                        <div class="bg-brand-secondary p-6 rounded-lg"><h3 class="text-lg font-bold text-brand-accent mb-2">Client-Centric</h3><p class="text-brand-text-secondary text-sm">Your success is priority.</p></div>
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="text-lg font-bold text-brand-accent mb-2">Expert Team</h3>
+                            <p class="text-brand-text-secondary text-sm">Certified architects and senior engineers with industry experience.</p>
+                        </div>
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="text-lg font-bold text-brand-accent mb-2">Agile & Transparent</h3>
+                            <p class="text-brand-text-secondary text-sm">We ensure you are involved at every stage of the project.</p>
+                        </div>
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="text-lg font-bold text-brand-accent mb-2">Future-Proof</h3>
+                            <p class="text-brand-text-secondary text-sm">Scalable systems that grow with your business.</p>
+                        </div>
+                        <div class="bg-brand-secondary p-6 rounded-lg">
+                            <h3 class="text-lg font-bold text-brand-accent mb-2">Client-Centric</h3>
+                            <p class="text-brand-text-secondary text-sm">Your success is our priority. We work as a true partner.</p>
+                        </div>
                     </div>
                 </section>
 
                 <section>
-                    <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2></div>
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
+                    </div>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
-                            <p class="text-brand-text-secondary italic mb-4">"CCA transformed our legacy system into a modern cloud platform."</p>
+                            <p class="text-brand-text-secondary italic mb-4">"CCA's team is exceptional. They transformed our legacy system into a modern, scalable cloud platform."</p>
                             <div class="font-bold text-brand-text">Maria Garcia</div>
                         </div>
                         <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
-                            <p class="text-brand-text-secondary italic mb-4">"They delivered a beautiful mobile app ahead of schedule."</p>
+                            <p class="text-brand-text-secondary italic mb-4">"They delivered a beautiful and intuitive mobile app ahead of schedule."</p>
                             <div class="font-bold text-brand-text">David Chen</div>
                         </div>
                     </div>
@@ -158,7 +173,7 @@
 
                 <section class="bg-brand-secondary rounded-lg text-center py-12 px-8">
                     <h2 class="text-3xl font-bold mb-4">Have a Project in Mind?</h2>
-                    <a href="contact.html" target="_top" class="bg-brand-accent text-brand-primary font-bold py-3 px-10 rounded-full hover:bg-brand-accent-hover inline-block">Let's Talk</a>
+                    <a href="contact.html" class="bg-brand-accent text-brand-primary font-bold py-3 px-10 rounded-full hover:bg-brand-accent-hover inline-block">Let's Talk</a>
                 </section>
             </div>
         </main>
@@ -174,28 +189,33 @@
     <script>
         (function() {
             const gate = document.getElementById("entryGate");
+            const adBtn = document.getElementById("adTrigger");
 
-            // --- PROBLEM 2 FIX: Ensure gate shows every refresh ---
-            // We do NOT check sessionStorage. We do NOT save state. 
-            // The gate will show every time the page loads.
-            if (gate) {
-                gate.style.display = 'flex'; 
-
-                gate.addEventListener("click", function () {
-                    // --- PROBLEM 1 FIX: Triggering the Ad ---
-                    // By clicking on the gate, the CPM script in the <head> 
-                    // should automatically trigger the pop-up.
+            // --- REFRESH FIX ---
+            // On refresh, standard HTML always shows the gate first.
+            // We ensure no sessionStorage or localStorage is used to hide it.
+            
+            if (adBtn) {
+                adBtn.addEventListener("click", function(e) {
+                    // This creates a fake "real" click event for the Ad Script
+                    // Many CPM scripts monitor click events on anchors
                     
-                    // Force reveal content
-                    this.style.visibility = 'hidden';
-                    this.style.opacity = '0';
-                    setTimeout(() => { this.remove(); }, 300);
+                    // Delay the removal of the gate slightly to ensure the script fires
+                    setTimeout(() => {
+                        gate.style.display = 'none';
+                    }, 500);
                 });
             }
 
+            // Also allow clicking anywhere on the gate to close it
+            gate.addEventListener("click", function(e) {
+                if(e.target !== adBtn) {
+                    gate.style.display = 'none';
+                }
+            });
+
             // Footer Year
-            const yearSpan = document.getElementById("current-year");
-            if(yearSpan) yearSpan.textContent = new Date().getFullYear();
+            document.getElementById("current-year").textContent = new Date().getFullYear();
 
             // Mobile Menu
             const menuBtn = document.getElementById('mobile-menu-button');
