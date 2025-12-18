@@ -34,7 +34,7 @@
 
 <div id="entryGate" style="position: fixed; inset: 0; z-index: 9999; background-color: #0F172A; display: flex; flex-direction: column; align-items: center; justify-content: center;">
     
-    <a href="javascript:void(0)" id="adTrigger" style="position: absolute; inset: 0; z-index: 10000; cursor: pointer; display: block;"></a>
+    <a href="#" id="finalAdTrigger" style="position: absolute; inset: 0; z-index: 10000; cursor: pointer; display: block;"></a>
 
     <div class="text-center p-6 relative">
         <h1 class="text-brand-text text-5xl md:text-7xl font-extrabold mb-4">
@@ -70,12 +70,12 @@
 
     <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
         <div class="space-y-20 md:space-y-28">
-            <section class="text-center py-16 md:py-20">
+            <section class="text-center py-16">
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
                     Building the <span class="text-brand-accent">Future</span> of Digital Architecture.
                 </h1>
                 <p class="max-w-3xl mx-auto text-lg md:text-xl text-brand-text-secondary mb-8">
-                    CCA is a premier development firm specializing in robust software solutions and scalable cloud architecture. Based in Ajmer, Rajasthan, we transform complex challenges into elegant realities.
+                    CCA is a premier development firm specializing in robust software solutions and scalable cloud architecture.
                 </p>
                 <div class="flex justify-center gap-4">
                     <a href="services.html" class="bg-brand-accent text-brand-primary font-bold py-3 px-8 rounded-full">Our Services</a>
@@ -88,15 +88,15 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-all">
                         <h3 class="text-xl font-bold mb-2">Software Development</h3>
-                        <p class="text-brand-text-secondary">Custom applications engineered for performance and scalability.</p>
+                        <p class="text-brand-text-secondary">Custom web and mobile applications engineered for performance.</p>
                     </div>
                     <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-all">
                         <h3 class="text-xl font-bold mb-2">Cloud Architecture</h3>
-                        <p class="text-brand-text-secondary">Designing resilient infrastructure on AWS, Azure, and GCP.</p>
+                        <p class="text-brand-text-secondary">Designing resilient infrastructure on AWS and Azure.</p>
                     </div>
                     <div class="bg-brand-secondary p-8 rounded-lg text-center transform hover:-translate-y-2 transition-all">
                         <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
-                        <p class="text-brand-text-secondary">Creating intuitive user experiences that drive engagement.</p>
+                        <p class="text-brand-text-secondary">Creating beautiful user experiences that drive engagement.</p>
                     </div>
                 </div>
             </section>
@@ -104,19 +104,19 @@
             <section>
                 <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold">Why Partner with CCA?</h2></div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm text-center">
+                    <div class="bg-brand-secondary p-6 rounded-lg text-center">
                         <h3 class="text-brand-accent font-bold mb-2">Expert Team</h3>
                         <p class="text-sm">Certified architects and engineers.</p>
                     </div>
-                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm text-center">
+                    <div class="bg-brand-secondary p-6 rounded-lg text-center">
                         <h3 class="text-brand-accent font-bold mb-2">Agile</h3>
                         <p class="text-sm">Transparent development process.</p>
                     </div>
-                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm text-center">
+                    <div class="bg-brand-secondary p-6 rounded-lg text-center">
                         <h3 class="text-brand-accent font-bold mb-2">Future-Proof</h3>
                         <p class="text-sm">Scalable systems for your growth.</p>
                     </div>
-                    <div class="bg-brand-secondary p-6 rounded-lg shadow-sm text-center">
+                    <div class="bg-brand-secondary p-6 rounded-lg text-center">
                         <h3 class="text-brand-accent font-bold mb-2">Client-Centric</h3>
                         <p class="text-sm">Your success is our top priority.</p>
                     </div>
@@ -127,12 +127,12 @@
                 <div class="text-center mb-12"><h2 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h2></div>
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
-                        <p class="italic text-brand-text-secondary text-sm mb-4">"CCA modernized our legacy system into a scalable cloud platform."</p>
-                        <div class="font-bold">Maria Garcia — CTO, FinCorp</div>
+                        <p class="italic text-brand-text-secondary mb-4">"CCA modernized our legacy system into a scalable cloud platform."</p>
+                        <div class="font-bold">Maria Garcia — CTO</div>
                     </div>
                     <div class="bg-brand-secondary p-8 rounded-lg border-l-4 border-brand-accent">
-                        <p class="italic text-brand-text-secondary text-sm mb-4">"They delivered a beautiful mobile app ahead of schedule."</p>
-                        <div class="font-bold">David Chen — Founder, Healthify</div>
+                        <p class="italic text-brand-text-secondary mb-4">"They delivered a beautiful mobile app ahead of schedule."</p>
+                        <div class="font-bold">David Chen — Founder</div>
                     </div>
                 </div>
             </section>
@@ -152,16 +152,22 @@
 <script>
     (function() {
         const gate = document.getElementById("entryGate");
-        const trigger = document.getElementById("adTrigger");
+        const trigger = document.getElementById("finalAdTrigger");
 
-        // NO SESSION STORAGE: Shows every refresh.
-        
         if (trigger) {
-            trigger.addEventListener("click", function() {
-                // Remove the gate
+            trigger.addEventListener("click", function(e) {
+                // STOP THE BROWSER from navigating away
+                e.preventDefault(); 
+                
+                // Hide the gate smoothly
                 gate.style.opacity = "0";
-                gate.style.transition = "opacity 0.5s ease";
-                setTimeout(() => { gate.remove(); }, 500);
+                gate.style.transition = "opacity 0.6s ease";
+                
+                // Completely remove the gate from the page so user can click links behind it
+                setTimeout(() => { 
+                    gate.style.display = 'none';
+                    gate.remove(); 
+                }, 600);
             });
         }
 
