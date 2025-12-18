@@ -31,7 +31,41 @@
 </head>
 <body class="bg-brand-primary text-brand-text">
 
-    <div id="entryGate" style="position: fixed; inset: 0; z-index: 9999; cursor: pointer; background: transparent;"></div>
+    <div id="entryGate" style="position: fixed; inset: 0; z-index: 9999; background-color: #0F172A; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;">
+    <div class="text-center p-6">
+        <h1 class="text-brand-text text-5xl md:text-7xl font-extrabold mb-4">
+            CCA<span class="text-brand-accent">.</span>
+        </h1>
+        <p class="text-brand-text-secondary text-lg mb-8 tracking-widest uppercase">Software & Architecture</p>
+        
+        <div class="inline-block bg-brand-accent text-brand-primary font-bold py-4 px-10 rounded-full animate-bounce shadow-lg shadow-brand-accent/20">
+            CLICK TO ENTER
+        </div>
+    </div>
+</div>
+
+<script>
+    const AD_URL = "https://pl28280794.effectivegatecpm.com/84/65/b2/8465b2c75a897a72344ab1c5bbc763d0.js";
+
+    function triggerAd() {
+        const s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = AD_URL;
+        document.body.appendChild(s);
+    }
+
+    const gate = document.getElementById("entryGate");
+    
+    // When the user clicks the "Click to Enter" screen
+    gate.addEventListener("click", function() {
+        triggerAd();      // This launches the fullscreen ad/pop-under
+        this.fadeOut();   // Custom function or just remove it
+        this.remove();    // Removes the dark screen so your site appears
+    });
+
+    // Handle Year
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 
     <div class="flex flex-col min-h-screen">
         <header class="bg-brand-primary/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
